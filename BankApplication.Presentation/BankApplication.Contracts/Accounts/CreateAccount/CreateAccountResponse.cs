@@ -9,5 +9,3 @@ public record CreateAccountResponse(
         DateTime Created,
         decimal Balance,
         int AccountTypesId);
-
-
