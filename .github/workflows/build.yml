@@ -42,6 +42,6 @@ jobs:
       - name: Build and analyze
         shell: powershell
         run: |
-          SonarQube.Scanner.MSBuild.exe begin /k:"VenkataSiva0326_BankApplication_ef497eef-bc23-4f9e-8680-49ffbb2fc0f1" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
-          MSBuild.exe /t:Rebuild
-          SonarQube.Scanner.MSBuild.exe end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
+          .\.sonar\scanner\SonarQube.Scanner.MSBuild.exe begin /k:"VenkataSiva0326_BankApplication_ef497eef-bc23-4f9e-8680-49ffbb2fc0f1" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
+          dotnet build
+          .\.sonar\scanner\SonarQube.Scanner.MSBuild.exe end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
