@@ -23,7 +23,6 @@ public static class DependencyInjection
             .AddContext(configuration)
             .AddPersistence();
         services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
-
         return services;
     }
 
