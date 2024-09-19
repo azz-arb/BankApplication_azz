@@ -1,4 +1,4 @@
-name: SonarqubeScan Build
+name: SonarqubeScan Build 
 
 on:
   push:
